@@ -1,12 +1,19 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Nav from '../Nav';
+import useWindowSize from '../../hooks/useWindowSize';
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { width } = useWindowSize();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  useEffect(() => {
+    if (width > 767 && isOpen) toggleMenu();
+  }, [width, isOpen]);
+
 
   return (
     <header className="bg-gray-800 text-white p-4 fixed w-full top-0 z-20">

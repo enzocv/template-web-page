@@ -1,11 +1,7 @@
 import './App.css'
-import CardList from './components/CardList';
-import Footer from './components/Footer';
-import Header from './components/Header'
-import HeroImage from './components/HeroImage';
-import TabContent from './components/TabContent';
-import Table from './components/Table';
+import { CardList, Footer, Header, HeroImage, TabContent, Table } from './components'
 import { Tab, Tabs } from './components/Tabs';
+
 
 function App() {
 
